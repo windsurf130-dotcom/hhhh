@@ -92,7 +92,7 @@ class _PhoneUpdateScreenState extends State<PhoneUpdateScreen> {
                         SvgPicture.asset("assets/images/forgotpass.svg"),
                         const SizedBox(height: 30),
                         Text(
-                          "Change Phone Number".translate(context),
+                          "Alterar Número de Telefone".translate(context),
                           style: heading1(context),
                         ),
                         const SizedBox(height: 30),
@@ -122,13 +122,13 @@ class _PhoneUpdateScreenState extends State<PhoneUpdateScreen> {
                               validator: (phoneNumber) {
                                 if (phoneNumber == null ||
                                     phoneNumber.number.isEmpty) {
-                                  return "Please enter your phone number"
+                                  return "Por favor, insira seu número de telefone"
                                       .translate(context);
                                 }
                                 int expectedLength =
                                     phoneLengths[phoneNumber.countryISOCode] ?? 10;
                                 if (phoneNumber.number.length != expectedLength) {
-                                  return "${"Phone number must be".translate(context)} $expectedLength ${"digits".translate(context)}";
+                                  return "${'O número de telefone deve ter'.translate(context)} $expectedLength ${'dígitos'.translate(context)}";
                                 }
                                 return null;
                               },
@@ -144,7 +144,7 @@ class _PhoneUpdateScreenState extends State<PhoneUpdateScreen> {
                                     );
                               }
                             },
-                            text: "Submit".translate(context),
+                            text: "Enviar".translate(context),
                             textColor: Colors.white,
                             backgroundColor: themeColor),
                         const SizedBox(height: 100),
@@ -152,7 +152,7 @@ class _PhoneUpdateScreenState extends State<PhoneUpdateScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Try again".translate(context),
+                              "Tentar novamente".translate(context),
                               style: regular3(context)
                                   .copyWith(color: notifires.getGrey2whiteColor),
                             ),
@@ -164,7 +164,7 @@ class _PhoneUpdateScreenState extends State<PhoneUpdateScreen> {
                                   goBack();
                                 },
                                 child: Text(
-                                  "Go Back".translate(context),
+                                  "Voltar".translate(context),
                                   style: boldstyle(context)
                                       .copyWith(color: themeColor),
                                 )),

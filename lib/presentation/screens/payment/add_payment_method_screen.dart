@@ -63,7 +63,7 @@ class _AddPaymentDetailsState extends State<AddPaymentDetails> {
     try {
       final int? parsedId = int.tryParse(widget.id.toString());
       if (parsedId == null) {
-        showErrorToastMessage("Invalid payment method ID: ${widget.id}");
+        showErrorToastMessage("ID de método de pagamento inválido: ${widget.id}".translate(context));
         return;
       }
 
@@ -127,7 +127,7 @@ class _AddPaymentDetailsState extends State<AddPaymentDetails> {
 
       context.read<PaymentMethodCubits>().addPaymentMethod(context, map: map);
     } catch (e) {
-      showErrorToastMessage("An error occurred: $e");
+      showErrorToastMessage("Ocorreu um erro: $e".translate(context));
     }
   }
 
@@ -137,7 +137,7 @@ class _AddPaymentDetailsState extends State<AddPaymentDetails> {
       backgroundColor: notifires.getbgcolor,
       appBar: CustomAppBar(
         title:
-        '${widget.addedit.toString().translate(context)} ${"${toTitleCaseFromCamel(widget.type??"").toString().translate(context)} ${"Details".translate(context)}".translate(context)}',
+        '${widget.addedit.toString().translate(context)} ${'${toTitleCaseFromCamel(widget.type??'').toString().translate(context)} ${'Detalhes'.translate(context)}'.translate(context)}',
         backgroundColor: notifires.getbgcolor,
 
         titleColor: notifires.getGrey1whiteColor,
@@ -165,11 +165,11 @@ class _AddPaymentDetailsState extends State<AddPaymentDetails> {
               children: [
                 TextFieldAdvance(
                   inputAlignment: TextAlign.start,
-                  txt: "Account Name".translate(context),
+                  txt: "Nome da Conta".translate(context),
                   inputType: TextInputType.text,
                   validator: (value) {
                     if (value != null && value.isEmpty) {
-                      return "Account Name".translate(context);
+                      return "O nome da conta é obrigatório".translate(context);
                     }
                     return null;
                   },
@@ -180,11 +180,11 @@ class _AddPaymentDetailsState extends State<AddPaymentDetails> {
                 ),
                 TextFieldAdvance(
                   inputAlignment: TextAlign.start,
-                  txt: "Account Number".translate(context),
+                  txt: "Número da Conta".translate(context),
                   inputType: TextInputType.text,
                   validator: (value) {
                     if (value != null && value.isEmpty) {
-                      return "Account number is Empty".translate(context);
+                      return "O número da conta está vazio".translate(context);
                     }
                     return null;
                   },
@@ -195,11 +195,11 @@ class _AddPaymentDetailsState extends State<AddPaymentDetails> {
                 ),
                 TextFieldAdvance(
                   inputAlignment: TextAlign.left,
-                  txt: "Bank Name".translate(context),
+                  txt: "Nome do Banco".translate(context),
                   inputType: TextInputType.text,
                   validator: (value) {
                     if (value != null && value.isEmpty) {
-                      return "Bank Name".translate(context);
+                      return "O nome do banco é obrigatório".translate(context);
                     }
                     return null;
                   },
@@ -210,11 +210,11 @@ class _AddPaymentDetailsState extends State<AddPaymentDetails> {
                 ),
                 TextFieldAdvance(
                   inputAlignment: TextAlign.start,
-                  txt: "Branch Name".translate(context),
+                  txt: "Nome da Agência".translate(context),
                   inputType: TextInputType.text,
                   validator: (value) {
                     if (value != null && value.isEmpty) {
-                      return "Branch Name is Empty".translate(context);
+                      return "O nome da agência está vazio".translate(context);
                     }
                     return null;
                   },
@@ -225,11 +225,11 @@ class _AddPaymentDetailsState extends State<AddPaymentDetails> {
                 ),
                 TextFieldAdvance(
                   inputAlignment: TextAlign.start,
-                  txt: "IBAN Name".translate(context),
+                  txt: "Código IBAN".translate(context),
                   inputType: TextInputType.text,
                   validator: (value) {
                     if (value != null && value.isEmpty) {
-                      return "IBAN is Empty".translate(context);
+                      return "O código IBAN está vazio".translate(context);
                     }
                     return null;
                   },
@@ -240,11 +240,11 @@ class _AddPaymentDetailsState extends State<AddPaymentDetails> {
                 ),
                 TextFieldAdvance(
                   inputAlignment: TextAlign.start,
-                  txt: "SWIFT/BIC Code".translate(context),
+                  txt: "Código SWIFT/BIC".translate(context),
                   inputType: TextInputType.text,
                   validator: (value) {
                     if (value != null && value.isEmpty) {
-                      return "SWIFT/BIC Code is Empty".translate(context);
+                      return "O código SWIFT/BIC está vazio".translate(context);
                     }
                     return null;
                   },
@@ -254,7 +254,7 @@ class _AddPaymentDetailsState extends State<AddPaymentDetails> {
                   height: 16,
                 ),
                 CustomsButtons(
-                    text: "Submit".translate(context),
+                    text: "Enviar".translate(context),
                     backgroundColor: themeColor,
                     onPressed: () {
                       submitPaymentDetails();
@@ -272,7 +272,7 @@ class _AddPaymentDetailsState extends State<AddPaymentDetails> {
                     ? TextFieldAdvance(
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return "Please enter the Upi ID".translate(context);
+                        return "Por favor, insira o ID UPI".translate(context);
                       }
                       return null;
                     },
@@ -302,7 +302,7 @@ class _AddPaymentDetailsState extends State<AddPaymentDetails> {
                 TextFieldAdvance(
                   validator: (value) {
                     if (value!.isEmpty) {
-                      return "Please enter the note"
+                      return "Por favor, insira uma observação"
                           .translate(context);
                     }
                     return null;
@@ -310,7 +310,7 @@ class _AddPaymentDetailsState extends State<AddPaymentDetails> {
                   maxlength: 1000,
                   inputAlignment: TextAlign.start,
                   minlines: 10,
-                  txt: "Note..".translate(context),
+                  txt: "Observação..".translate(context),
                   textEditingControllerCommon: noteText,
                   inputType: TextInputType.text,
 
@@ -329,7 +329,7 @@ class _AddPaymentDetailsState extends State<AddPaymentDetails> {
                 ),
                 const SizedBox(height: 25),
                 CustomsButtons(
-                    text: "Submit".translate(context),
+                    text: "Enviar".translate(context),
                     backgroundColor: themeColor,
                     onPressed: () {
                       bool isValid = false;
@@ -344,7 +344,7 @@ class _AddPaymentDetailsState extends State<AddPaymentDetails> {
 
                       if (!isValid) {
                         showErrorToastMessage(
-                            "Please fill all the details"
+                            "Por favor, preencha todos os detalhes"
                                 .translate(context));
                         return;
                       }

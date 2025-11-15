@@ -146,7 +146,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                         Icon(Icons.verified, color: Colors.green, size: 48),
                         SizedBox(height: 10),
                         Text(
-                          "Documents Approved",
+                          "Documentos Aprovados",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 22,
@@ -157,7 +157,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                       ],
                     ),
                     content: const Text(
-                      "Your documents have been successfully verified! 🎉\nYou are now ready to receive ride requests.",
+                      "Seus documentos foram verificados com sucesso! 🎉\nAgora você está pronto para receber solicitações de corrida.",
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 16, color: Colors.black54),
                     ),
@@ -183,7 +183,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: const Text(
-                            "Great!",
+                            "Ótimo!",
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -227,7 +227,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                             color: Colors.redAccent, size: 48),
                         SizedBox(height: 10),
                         Text(
-                          "Documents Rejected",
+                          "Documentos Rejeitados",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 22,
@@ -238,7 +238,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                       ],
                     ),
                     content: const Text(
-                      "Unfortunately, your submitted documents have been rejected.\n\nPlease review the requirements and upload valid documents again, or contact support for help.",
+                      "Infelizmente, os documentos enviados foram rejeitados.\n\nPor favor, revise os requisitos e envie documentos válidos novamente ou entre em contato com o suporte para obter ajuda.",
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 16, color: Colors.black54),
                     ),
@@ -265,7 +265,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: const Text(
-                            "Close",
+                            "Fechar",
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -580,14 +580,14 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                                                 const SizedBox(width: 10),
                                                 Expanded(
                                                   child: Text(
-                                                    "Low Wallet Balance".translate(context),
+                                                    "Saldo Baixo na Carteira".translate(context),
                                                     style: heading2Grey1(context),
                                                   ),
                                                 ),
                                               ],
                                             ),
                                             content:  Text(
-                                                "Low balance! Recharge or add money now to stay active on the platform.".translate(context),
+                                                "Saldo baixo! Recarregue ou adicione dinheiro agora para permanecer ativo na plataforma.".translate(context),
                                               style: regular2(context),
                                               textAlign: TextAlign.center,
                                             ),
@@ -695,7 +695,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                                                   size: 50),
                                               const SizedBox(height: 16),
                                               Text(
-                                                "Account Verification In Progress"
+                                                "Verificação de Conta em Andamento"
                                                     .translate(context),
                                                 style: Theme.of(context)
                                                     .textTheme
@@ -707,7 +707,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                                               ),
                                               const SizedBox(height: 10),
                                               Text(
-                                                "We’re currently reviewing your documents. You’ll get full access once verification is complete. Thanks for your patience!"
+                                                "Estamos analisando seus documentos. Você terá acesso total assim que a verificação for concluída. Obrigado pela paciência!"
                                                     .translate(context),
                                                 style: Theme.of(context)
                                                     .textTheme
@@ -786,14 +786,14 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                               children: [
                                 dashboardInfoTile(
                                   context,
-                                  title: "Earnings",
+                                  title: "Ganhos",
                                   value: state is DashboardSuceess
                                       ? "$currency ${(double.tryParse(state.totalEarning) ?? 0.0).toStringAsFixed(2)}"
                                       : "$currency 0.00",
                                 ),
                                 dashboardInfoTile(
                                   context,
-                                  title: "Ratings",
+                                  title: "Avaliações",
                                   value: state is DashboardSuceess
                                       ? state.totalRating.toString()
                                       : "0",
@@ -802,7 +802,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                                 ),
                                 dashboardInfoTile(
                                   context,
-                                  title: "Total Order's",
+                                  title: "Total de Pedidos",
                                   value: state is DashboardSuceess
                                       ? state.totalOrder.toString()
                                       : "0",
@@ -836,12 +836,12 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
             ),
             const SizedBox(height: 16),
             Text(
-              "Unable to get location".translate(context),
+              "Não foi possível obter a localização".translate(context),
               style: heading2Grey1(context),
             ),
             const SizedBox(height: 8),
             Text(
-              "Please check your connection and try again".translate(context),
+              "Por favor, verifique sua conexão e tente novamente".translate(context),
               style: regular2(context),
               textAlign: TextAlign.center,
             ),
@@ -855,7 +855,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                 });
               },
               icon: const Icon(Icons.refresh),
-              label:   Text("Reload Map".translate(context),style: heading3Grey1(context),),
+              label:   Text("Recarregar Mapa".translate(context),style: heading3Grey1(context),),
               style: ElevatedButton.styleFrom(
                 backgroundColor: themeColor,
                 foregroundColor: blackColor,
@@ -1231,7 +1231,7 @@ class CustomBottomSheetState extends State<CustomBottomSheet>
                                         CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                              "Verified Pickup".translate(
+                                              "Ponto de Coleta Verificado".translate(
                                                   context),
                                               style: headingBlack(context)
                                                   .copyWith(
@@ -1247,7 +1247,7 @@ class CustomBottomSheetState extends State<CustomBottomSheet>
                                           ),
                                           const SizedBox(height: 20),
                                           Text(
-                                              "Verified Drop At"
+                                              "Ponto de Destino Verificado"
                                                   .translate(context),
                                               style: headingBlack(context)
                                                   .copyWith(
@@ -1282,8 +1282,8 @@ class CustomBottomSheetState extends State<CustomBottomSheet>
                                         .read<RideStatusCubit>()
                                         .state
                                         .rideAcceptedStatus,
-                                    acceptedText: "ACCEPTED",
-                                    defaultText: "ACCEPT RIDE",
+                                    acceptedText: "ACEITO",
+                                    defaultText: "ACEITAR CORRIDA",
                                     onChanged: (value) async {
                                       if (value) {
                                         context
@@ -1306,7 +1306,7 @@ class CustomBottomSheetState extends State<CustomBottomSheet>
                                         goBack();
                                         box.delete('ride_request_start_time');
                                         goTo(RideScreens(
-                                          tripTitle: "Start Pickup",
+                                          tripTitle: "Iniciar Coleta",
                                           isOnDutyArrived:
                                           box.get("driver_status"),
                                           currentLatLang: widget.currentLatlang,

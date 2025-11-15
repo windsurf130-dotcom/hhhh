@@ -134,13 +134,9 @@
     "ACCEPT RIDE": "ACEITAR CORRIDA",
     "Skip": "Pular",
     "Register Vehicle": "Registrar Veículo",
-    "Let's get you started by registering 
- your vehicle on Amar!": "Vamos começar registrando
-seu veículo na Amar!",
+    "Let's get you started by registering your vehicle on Amar!": "Vamos começar registrando seu veículo na Amar!",
     "Upload Documents": "Enviar Documentos",
-    "We would like to get to know you better. Let’s get 
- some documents uploaded!": "Gostaríamos de te conhecer melhor. Vamos
-enviar alguns documentos!",
+    "We would like to get to know you better. Let’s get some documents uploaded!": "Gostaríamos de te conhecer melhor. Vamos enviar alguns documentos!",
     "Earn Money": "Ganhe Dinheiro",
     "Click below and start making money!": "Clique abaixo e comece a ganhar dinheiro!",
     "Get Started": "Começar",
@@ -183,11 +179,7 @@ enviar alguns documentos!",
     "Enter Verification Code": "Digite o Código de Verificação",
     "Please ask customer for OTP": "Por favor, peça o código ao cliente",
     "Ride Cancelled": "Corrida Cancelada",
-    "The rider has cancelled the ride request.
-
-You can head back to the home screen and wait for another ride.": "O passageiro cancelou a solicitação de corrida.
-
-Você pode voltar para a tela inicial e aguardar outra corrida.",
+    "The rider has cancelled the ride request.\n\nYou can head back to the home screen and wait for another ride.": "O passageiro cancelou a solicitação de corrida.\n\nVocê pode voltar para a tela inicial e aguardar outra corrida.",
     "Go Home": "Ir para o Início",
     "Go to PickUp": "Ir para o Embarque",
     "Customer Verified Location": "Local Verificado pelo Cliente",
@@ -198,25 +190,17 @@ Você pode voltar para a tela inicial e aguardar outra corrida.",
     "COMPLETE RIDE": "CONCLUIR CORRIDA",
     "Head to pickup": "Dirija-se ao embarque",
     "Cancel Ride Confirmation": "Confirmação de Cancelamento de Corrida",
-    "You have already accepted this ride.
-Canceling now may impact your rating or future ride requests.": "Você já aceitou esta corrida.
-Cancelar agora pode impactar sua avaliação ou futuras solicitações de corrida.",
+    "You have already accepted this ride. Canceling now may impact your rating or future ride requests.": "Você já aceitou esta corrida. Cancelar agora pode impactar sua avaliação ou futuras solicitações de corrida.",
     "Cancel Ride": "Cancelar Corrida",
     "Continue Ride": "Continuar Corrida",
     "Upload Driving Licence": "Enviar Carteira de Motorista",
-    "Securely Upload Your Driving License 
-Document": "Envie com segurança o documento da sua
-Carteira de Motorista",
+    "Securely Upload Your Driving License Document": "Envie com segurança o documento da sua Carteira de Motorista",
     "Vehicle ID is not being received.": "O ID do veículo não está sendo recebido.",
     "Upload Driver’s Authorization": "Enviar Autorização do Motorista",
-    "Securely Upload Your Driver’s Authorization 
-Document": "Envie com segurança o documento de
-Autorização do Motorista",
+    "Securely Upload Your Driver’s Authorization Document": "Envie com segurança o documento de Autorização do Motorista",
     "Select image first": "Selecione a imagem primeiro",
     "Upload Service License": "Enviar Licença de Serviço",
-    "Securely Upload Your Service License 
-Document": "Envie com segurança o documento da sua
-Licença de Serviço",
+    "Securely Upload Your Service License Document": "Envie com segurança o documento da sua Licença de Serviço",
     "Please wait until your document is approved.": "Por favor, aguarde a aprovação do seu documento.",
     "Certificate of Inspection": "Certificado de Inspeção",
     "Add photo": "Adicionar foto",
@@ -276,22 +260,8 @@ Licença de Serviço",
     "Please enable 'Always' location in settings.": "Por favor, ative a localização 'Sempre' nas configurações.",
     "Overlay permission denied. Enable from settings.": "Permissão de sobreposição negada. Ative nas configurações.",
     "Location permission denied. Enable from settings.": "Permissão de localização negada. Ative nas configurações.",
-    "We need your location even when the app isn't open to ensure accurate ride tracking.
-
-Please select *Always Allow* when prompted. This helps your driver find you faster, ensures safety, and improves route accuracy.": "Precisamos da sua localização mesmo quando o aplicativo não está aberto para garantir o rastreamento preciso da corrida.
-
-Por favor, selecione *Permitir Sempre* quando solicitado. Isso ajuda seu motorista a encontrá-lo mais rápido, garante a segurança e melhora a precisão da rota.",
-    "To serve you better, we need:
-
-1. *Location Access* – for real-time tracking even in the background.
-2. *Overlay Permission* – to show ride updates while you use other apps.
-
-This helps your driver reach you quickly and keeps your trip seamless.": "Para atendê-lo melhor, precisamos de:
-
-1. *Acesso à Localização* – para rastreamento em tempo real, mesmo em segundo plano.
-2. *Permissão de Sobreposição* – para mostrar atualizações da corrida enquanto você usa outros aplicativos.
-
-Isso ajuda seu motorista a chegar rapidamente e mantém sua viagem tranquila.",
+    "We need your location even when the app isn't open to ensure accurate ride tracking.\n\nPlease select *Always Allow* when prompted. This helps your driver find you faster, ensures safety, and improves route accuracy.": "Precisamos da sua localização mesmo quando o aplicativo não está aberto para garantir o rastreamento preciso da corrida.\n\nPor favor, selecione *Permitir Sempre* quando solicitado. Isso ajuda seu motorista a encontrá-lo mais rápido, garante a segurança e melhora a precisão da rota.",
+    "To serve you better, we need:\n\n1. *Location Access* – for real-time tracking even in the background.\n2. *Overlay Permission* – to show ride updates while you use other apps.\n\nThis helps your driver reach you quickly and keeps your trip seamless.": "Para atendê-lo melhor, precisamos de:\n\n1. *Acesso à Localização* – para rastreamento em tempo real, mesmo em segundo plano.\n2. *Permissão de Sobreposição* – para mostrar atualizações da corrida enquanto você usa outros aplicativos.\n\nIsso ajuda seu motorista a chegar rapidamente e mantém sua viagem tranquila.",
     "Allow Permission": "Permitir",
     "select one": "selecione um",
     "Search Country": "Pesquisar País",
@@ -406,5 +376,15 @@ Isso ajuda seu motorista a chegar rapidamente e mantém sua viagem tranquila.",
     "Are you sure you want to delete your account?": "Tem certeza de que deseja excluir sua conta?",
     "This action is permanent and cannot be undone.": "Esta ação é permanente e não pode ser desfeita.",
     "Yes, Delete": "Sim, Excluir",
-    "Your maximum withdrawal limit is": "Seu limite máximo de saque é"
+    "Your maximum withdrawal limit is": "Seu limite máximo de saque é",
+    "Notifications": "Notificações",
+    "System": "Sistema",
+    "Your booking #%s has been successful.": "Sua reserva #%s foi realizada com sucesso.",
+    "Promotion": "Promoção",
+    "Invite friends - Get 3 coupons each!": "Convide amigos - Ganhe 3 cupons para cada um!",
+    "Thank You! Your transaction is complete.": "Obrigado! Sua transação foi concluída.",
+    "No notifications yet": "Nenhuma notificação ainda",
+    "Your recharge failed": "Sua recarga falhou",
+    "Your booking failed": "Sua reserva falhou",
+    "Invalid Order": "Pedido inválido"
 }

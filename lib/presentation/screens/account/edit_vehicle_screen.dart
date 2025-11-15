@@ -104,30 +104,30 @@ class _EditVehicleScreenState extends State<EditVehicleScreen> {
                   }
                   if (state.textEditingVehicleNumberController.text.isEmpty) {
                     showErrorToastMessage(
-                        "Enter the vehicle registration number".translate(context));
+                        "Digite a matrícula do veículo".translate(context));
                     return ;
                   }
                   if ( state.textEditingVehicleColorController.text.isEmpty) {
                     showErrorToastMessage(
-                        "Enter the vehicle color".translate(context));
+                        "Insira a cor do veículo".translate(context));
                     return ;
                   }
                   if (state.state.vehicleYear.isEmpty) {
-                    showErrorToastMessage("Enter the vehicle Year".translate(context));
+                    showErrorToastMessage("Insira o ano do veículo".translate(context));
                     return ;
                   }
-                  metaDataMap.insertToMap("year", state.state.vehicleYear);
-                  metaDataMap.insertToMap("vehicle_registration_number",
+                  metaDataMap.insertToMap("ano", state.state.vehicleYear);
+                  metaDataMap.insertToMap("número_de_registro_do_veículo",
                       state.textEditingVehicleNumberController.text);
                   metaDataMap.insertToMap(
-                      "make", state.textEditingVehicleBrandController.text);
+                      "fazer", state.textEditingVehicleBrandController.text);
                   metaDataMap.insertToMap(
-                      "model", state.textEditingVehicleModelController.text);
-                  metaDataMap.insertToMap("service_type", "booking");
+                      "modelo", state.textEditingVehicleModelController.text);
+                  metaDataMap.insertToMap("tipo_de_serviço", "reserva");
 
                   final addItemMap = context.read<AddItemMap>();
                   addItemMap.insertToMap(
-                      "metaData", jsonEncode(metaDataMap.state));
+                      "metadados", jsonEncode(metaDataMap.state));
                   addItemMap.insertToMap("make", state.state.vehicleMake);
 
                   addItemMap.insertToMap(

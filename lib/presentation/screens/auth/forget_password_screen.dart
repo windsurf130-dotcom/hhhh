@@ -61,7 +61,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                                   ),
                                   const SizedBox(height: 30),
                                   Text(
-                                    "Reset Password".translate(context),
+                                    "Redefinir Senha".translate(context),
                                     style: heading2Grey1(context)
                                         .copyWith(fontSize: 24),
                                   ),
@@ -69,7 +69,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                                     height: 10,
                                   ),
                                   Text(
-                                    "Enter the email address associated with your account,and we'll email you a link to reset your password."
+                                    "Digite o endereço de e-mail associado à sua conta e enviaremos um link para redefinir sua senha."
                                         .translate(context),
                                     style: regular2(context),
                                     textAlign: TextAlign.center,
@@ -79,7 +79,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                                   ),
                                   TextFieldAdvance(
                                     inputAlignment: TextAlign.start,
-                                    txt: "Email".translate(context),
+                                    txt: "E-mail".translate(context),
                                     icons: Icon(
                                       Icons.mail,
                                       color: notifires.getwhiteblackColor
@@ -95,7 +95,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                                   const SizedBox(height: 50),
                                   CustomsButtons(
                                       onPressed: () {},
-                                      text: "Send Otp".translate(context),
+                                      text: "Enviar Código".translate(context),
                                       textColor: blackColor,
                                       backgroundColor: themeColor),
                                   const SizedBox(height: 80),
@@ -103,7 +103,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                        "Try again".translate(context),
+                                        "Tentar novamente".translate(context),
                                         style: regular3(context).copyWith(
                                             color:
                                                 notifires.getGrey2whiteColor),
@@ -116,7 +116,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                                             Navigator.pop(context);
                                           },
                                           child: Text(
-                                            "Go Back".translate(context),
+                                            "Voltar".translate(context),
                                             style: boldstyle(context)
                                                 .copyWith(color: blackColor),
                                           )),

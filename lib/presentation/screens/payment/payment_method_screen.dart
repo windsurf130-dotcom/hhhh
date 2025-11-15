@@ -113,7 +113,7 @@ class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
     final existingDetails = _getPaymentDetailsForType(payoutType);
 
     goTo(AddPaymentDetails(
-      addedit: isConfigured ? "Edit" : "Add",
+      addedit: isConfigured ? "Editar" : "Adicionar",
       id: payoutType.id ?? 0,
       type: payoutType.name ?? '',
       existingPayoutMethods: paymentMethodsList,
@@ -138,7 +138,7 @@ class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
         return {
           "payout_method_id": parsedMethodId,
           "is_active": methodIsActive,
-          if (method.payoutMethod?.toLowerCase() == "bank account") ...{
+          if (method.payoutMethod?.toLowerCase() == "conta bancária") ...{
             "account_name": method.details?.accountName,
             "bank_name": method.details?.bankName,
             "branch_name": method.details?.branchName,
@@ -232,7 +232,7 @@ class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
 
         const SizedBox(height: 6),
         Text(
-          "Add your preferred account to receive your payouts securely."
+          "Adicione sua conta preferida para receber seus pagamentos com segurança.."
               .translate(context),
           style: regular2(context).copyWith(
             fontSize: 14,
@@ -250,7 +250,7 @@ class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
     if (payOutList.isEmpty) {
       return Expanded(
         child: Center(
-          child: Text("Data not found".translate(context),style: regular2(context),),
+          child: Text("Dados não encontrados".translate(context),style: regular2(context),),
         ),
       );
     }

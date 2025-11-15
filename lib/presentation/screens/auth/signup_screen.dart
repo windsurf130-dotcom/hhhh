@@ -127,7 +127,7 @@ class _SignUpState extends State<SignUp> {
                                   const SizedBox(
                                     height: 10,
                                   ),
-                                  Text("Sign Up".translate(context),
+                                  Text("Cadastrar".translate(context),
                                       style: heading1(context)),
                                   const SizedBox(
                                     height: 20,
@@ -139,7 +139,7 @@ class _SignUpState extends State<SignUp> {
                                       });
                                     },
                                     inputAlignment: TextAlign.start,
-                                    txt: "Name".translate(context),
+                                    txt: "Nome".translate(context),
                                     icons: Icon(
                                       Icons.person_2_outlined,
                                       color: blackColor,
@@ -151,7 +151,7 @@ class _SignUpState extends State<SignUp> {
                                       if (isValidName(value!)) {
                                         return null;
                                       } else {
-                                        return "Name is invalid"
+                                        return "Nome inválido"
                                             .translate(context);
                                       }
                                     },
@@ -187,7 +187,7 @@ class _SignUpState extends State<SignUp> {
                                       validator: (phoneNumber) {
                                         if (phoneNumber == null ||
                                             phoneNumber.number.isEmpty) {
-                                          return "Please enter your phone number"
+                                          return "Por favor, insira seu número de telefone"
                                               .translate(context);
                                         }
                                         int expectedLength = phoneLengths[
@@ -195,7 +195,7 @@ class _SignUpState extends State<SignUp> {
                                             10;
                                         if (phoneNumber.number.length !=
                                             expectedLength) {
-                                          return "${"Phone number must be"} $expectedLength ${"digits"}";
+                                          return "${'O número de telefone deve ter'.translate(context)} $expectedLength ${'dígitos'.translate(context)}";
                                         }
                                         return null;
                                       },
@@ -211,7 +211,7 @@ class _SignUpState extends State<SignUp> {
                                       });
                                     },
                                     inputAlignment: TextAlign.start,
-                                    txt: "Email".translate(context),
+                                    txt: "E-mail".translate(context),
                                     icons: Icon(
                                       Icons.mail_outline_outlined,
                                       color: blackColor,
@@ -230,7 +230,7 @@ class _SignUpState extends State<SignUp> {
                                           if (textEditingSingUpControllerPhoneNumber
                                               .text.isEmpty) {
                                             showErrorToastMessage(
-                                                "Fill valid mobile number"
+                                                "Preencha um número de celular válido"
                                                     .translate(context));
                                           }
                                           context
@@ -264,7 +264,7 @@ class _SignUpState extends State<SignUp> {
                                         }
                                       },
                                       textColor: blackColor,
-                                      text: "Sign up",
+                                      text: "Cadastrar".translate(context),
                                       backgroundColor: themeColor),
                                   const SizedBox(
                                     height: 40,
@@ -273,7 +273,7 @@ class _SignUpState extends State<SignUp> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                        "Already have an account?".translate(context),
+                                        "Já tem uma conta?".translate(context),
                                         style: regular3(context)
                                             .copyWith(color: notifires.getGrey2whiteColor),
                                       ),
@@ -286,7 +286,7 @@ class _SignUpState extends State<SignUp> {
                                                   builder: (context) => const LoginScreen()));
                                         },
                                         child: Text(
-                                          "Sign in".translate(context),
+                                          "Entrar".translate(context),
                                           style: heading1(context).copyWith(
                                             color: blackColor,
                                             fontSize: 16,

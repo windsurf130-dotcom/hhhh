@@ -401,12 +401,12 @@ class _OtpScreenState extends State<OtpScreen> {
                                 const SizedBox(
                                   height: 20,
                                 ),
-                                Text("Verification", style: heading1(context)),
+                                Text("Verificação".translate(context), style: heading1(context)),
                                 const SizedBox(
                                   height: 10,
                                 ),
                                 Text(
-                                    "Verification code was sent to your Phone number"
+                                    "O código de verificação foi enviado para o seu número de telefone"
                                         .translate(context),
                                     style: regular(context)),
                                 const SizedBox(
@@ -424,7 +424,7 @@ class _OtpScreenState extends State<OtpScreen> {
                                               MainAxisAlignment.center,
                                           children: [
                                             Text(
-                                                "Didn't receive code?"
+                                                "Não recebeu o código?"
                                                     .translate(context),
                                                 style: regular3(context).copyWith(
                                                     color: notifires
@@ -450,7 +450,7 @@ class _OtpScreenState extends State<OtpScreen> {
                                                     );
                                               },
                                               child: Text(
-                                                  "Resend".translate(context),
+                                                  "Reenviar".translate(context),
                                                   style: regular2(context)
                                                       .copyWith(
                                                           color: blackColor,
@@ -466,7 +466,7 @@ class _OtpScreenState extends State<OtpScreen> {
                                               MainAxisAlignment.center,
                                           children: [
                                             Text(
-                                              "Resend code in"
+                                              "Reenviar código em"
                                                   .translate(context),
                                               style: regular3(context).copyWith(
                                                   color: notifires
@@ -509,7 +509,7 @@ class _OtpScreenState extends State<OtpScreen> {
                                       borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
                                       borderSide: BorderSide(color: notifires.getGrey6whiteColor),
                                     ),
-                                    hintText: "Enter OTP".translate(context),
+                                    hintText: "Digite o OTP".translate(context),
                                     hintStyle: regular(context),
                                     enabledBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(13),
@@ -533,7 +533,7 @@ class _OtpScreenState extends State<OtpScreen> {
                                         if (textEditingOtpController
                                             .text.isEmpty) {
                                           showErrorToastMessage(
-                                              "Please Enter the Otp"
+                                              "Por favor, digite o OTP"
                                                   .translate(context));
                                           return;
                                         }
@@ -594,7 +594,7 @@ class _OtpScreenState extends State<OtpScreen> {
                                         }
                                       }
                                     },
-                                    text: "Continue",
+                                    text: "Continuar".translate(context),
                                     backgroundColor: themeColor),
                                 const SizedBox(
                                   height: 40,

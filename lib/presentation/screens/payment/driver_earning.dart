@@ -33,13 +33,13 @@ class _DriverEarningState extends State<DriverEarning> {
   String totalBooking = "0";
   DriverWalletModel? model;
   final List<String> _rangeOptions = [
-    "Today",
-    "Last 7 Days",
-    "Last 30 Days",
-    "This Month",
-    "Custom",
+    "Hoje",
+    "Últimos 7 dias",
+    "Últimos 30 dias",
+    "Este mês",
+    "Personalizado",
   ];
-  String _selectedRange = 'Today';
+  String _selectedRange = 'Hoje';
   DateTime? _startDate;
   DateTime? _endDate;
   bool isLoading = false;
@@ -83,22 +83,22 @@ class _DriverEarningState extends State<DriverEarning> {
     DateTime? end;
 
     switch (range) {
-      case 'Today':
+      case 'Hoje':
         start = end = now;
         break;
-      case 'Last 7 Days':
+      case 'Últimos 7 dias':
         start = now.subtract(const Duration(days: 6));
         end = now;
         break;
-      case 'Last 30 Days':
+      case 'Últimos 30 dias':
         start = now.subtract(const Duration(days: 29));
         end = now;
         break;
-      case 'This Month':
+      case 'Este mês':
         start = DateTime(now.year, now.month, 1);
         end = now;
         break;
-      case 'Custom':
+      case 'Personalizado':
         _showCustomDateRangePicker();
         return;
     }
@@ -310,7 +310,7 @@ class _DriverEarningState extends State<DriverEarning> {
                                     if (_startDate.toString() !=
                                         _endDate.toString())
                                       Text(
-                                        "From".translate(context),
+                                        "De".translate(context),
                                         style: regular(context)
                                             .copyWith(color: grey3),
                                       ),
@@ -335,7 +335,7 @@ class _DriverEarningState extends State<DriverEarning> {
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
                                     Text(
-                                      "To".translate(context),
+                                      "Até".translate(context),
                                       style: regular(context)
                                           .copyWith(color: grey3),
                                     ),
@@ -361,19 +361,19 @@ class _DriverEarningState extends State<DriverEarning> {
                                   items: _rangeOptions.map((option) {
                                     IconData iconData;
                                     switch (option) {
-                                      case 'Today':
+                                      case 'Hoje':
                                         iconData = Icons.today;
                                         break;
-                                      case 'Last 7 Days':
+                                      case 'Últimos 7 dias':
                                         iconData = Icons.calendar_view_week;
                                         break;
-                                      case 'Last 30 Days':
+                                      case 'Últimos 30 dias':
                                         iconData = Icons.calendar_month;
                                         break;
-                                      case 'This Month':
+                                      case 'Este mês':
                                         iconData = Icons.date_range;
                                         break;
-                                      case 'Custom':
+                                      case 'Personalizado':
                                         iconData = Icons.edit_calendar;
                                         break;
                                       default:
@@ -444,10 +444,10 @@ class _DriverEarningState extends State<DriverEarning> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           _buildCard("$currency $totalEarning",
-                              "Total Earnings".translate(context)),
+                              "Ganhos Totais".translate(context)),
                           const SizedBox(width: 12),
                           _buildCard(totalBooking,
-                              "Total Bookings".translate(context)),
+                              "Total de Corridas".translate(context)),
                         ],
                       ),
                     const SizedBox(height: 20),
@@ -458,7 +458,7 @@ class _DriverEarningState extends State<DriverEarning> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Recent Transactions".translate(context),
+                              "Transações Recentes".translate(context),
                               style: headingBlack(context),
                             ),
                           ],
@@ -469,7 +469,7 @@ class _DriverEarningState extends State<DriverEarning> {
                       rideList.isEmpty
                           ? Center(
                               child: Text(
-                                  "No transactions found".translate(context)))
+                                  "Nenhuma transação encontrada".translate(context)))
                           : ListView.separated(
                               shrinkWrap: true,
                               physics: const NeverScrollableScrollPhysics(),

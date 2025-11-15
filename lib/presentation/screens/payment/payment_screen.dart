@@ -40,16 +40,16 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
   void _onProceed(BuildContext context, PaymentMethod? method) {
     if (method == null) {
-      showErrorToastMessage("Please select a payment method");
+      showErrorToastMessage("Por favor, selecione um método de pagamento".translate(context));
       return;
     }
 
     if (method == PaymentMethod.cash) {
       _showConfirmationDialog(context, "cash",
-          "Has the payment been received by cash? If yes, click to proceed.");
+          "O pagamento em dinheiro foi recebido? Se sim, clique para continuar.".translate(context));
     } else if (method == PaymentMethod.online) {
       _showConfirmationDialog(
-          context, "online", "Are you sure you want to pay online?");
+          context, "online", "Tem certeza que deseja pagar online?".translate(context));
     }
   }
 
@@ -121,7 +121,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
       child: Scaffold(
         backgroundColor: whiteColor,
         appBar: CustomAppBar(
-          title: "Trip Summary",
+          title: "Resumo da Viagem".translate(context),
           onBackTap: () async {
 
             _onProceed(context, PaymentMethod.cash);
@@ -158,7 +158,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                               .read<GetListenRideRequestBookingIdCubit>()
                               .updatePaymentStatus(
                                 rideId: widget.rideRequest.rideId ?? "",
-                                newStatus: "collected",
+                                newStatus: "coletado",
                               );
                           await _completeRideProcess(context);
                         } else if (state is UpdatePaymentFailure) {
@@ -201,7 +201,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         _buildStatusTag(context),
         const SizedBox(height: 15),
         Text(
-          "${"Please collect fare from".translate(context)} \n ${widget.rideRequest.customer?.userName ?? ""}.",
+          "${'Por favor, cobre a tarifa de'.translate(context)} \n ${widget.rideRequest.customer?.userName ?? ''}.",
           style: heading3Grey1(context).copyWith(fontSize: 15),
           textAlign: TextAlign.center,
         ),
@@ -229,7 +229,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         children: [
           Icon(Icons.verified, color: whiteColor, size: 18),
           const SizedBox(width: 10),
-          Text("RIDE COMPLETE".translate(context),
+          Text("CORRIDA CONCLUÍDA".translate(context),
               style: regular(context).copyWith(color: whiteColor,fontWeight: FontWeight.bold)),
         ],
       ),
@@ -298,7 +298,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
               children: [
                 // Pickup
                 Text(
-                  "Pickup".translate(context),
+                  'Coleta'.translate(context),
                   style: TextStyle(
                     fontSize: 12,
                     color: Colors.green.shade600,
@@ -315,7 +315,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
                 // Drop
                 Text(
-                  "Drop".translate(context),
+                  'Destino'.translate(context),
                   style: TextStyle(
                     fontSize: 12,
                     color: Colors.red.shade600,
@@ -345,14 +345,14 @@ class _PaymentScreenState extends State<PaymentScreen> {
         textColor: blackColor,
         backgroundColor: themeColor,
         onPressed: () => _onProceed(context, selectedMethod),
-        text: "Collect",
+        text: "Cobrar".translate(context),
       );
     } else {
       return CustomsButtons(
         textColor: blackColor,
         backgroundColor: themeColor,
         onPressed: () {},
-        text: "Waiting for payment...",
+        text: "Aguardando pagamento...".translate(context),
       );
     }
   }

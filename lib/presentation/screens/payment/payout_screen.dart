@@ -70,9 +70,9 @@ class _PayoutScreenState extends State<PayoutScreen> {
     if (cubit.state is AmountPayoutSuccess) {
       _amountController.clear();
       _fetchTransactions();
-      showToastMessage("Withdrawal request submitted");
+      showToastMessage("Withdrawal request submitted".translate(context));
     } else if (cubit.state is AmountPayoutFailed) {
-      showErrorToastMessage("Withdrawal failed" );
+      showErrorToastMessage("Withdrawal failed".translate(context));
     }
   }
 

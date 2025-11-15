@@ -189,7 +189,7 @@ class _ThankuScreenState extends State<ThankuScreen>
                     child: Column(
                       children: [
                         Text(
-                          "${"Ride Completed Successfully!".translate(context)} 🎉",
+                          "${"Corrida concluída com sucesso!".translate(context)} 🎉",
                           style: heading2Grey1(context).copyWith(
                             fontSize: 18,
                             fontWeight: FontWeight.w800,
@@ -279,7 +279,7 @@ class _ThankuScreenState extends State<ThankuScreen>
                   ),
                   child: CustomsButtons(
                     textColor: blackColor,
-                    text: "Go to Home".translate(context).toUpperCase(),
+                    text: "Ir para Início".translate(context).toUpperCase(),
                     backgroundColor: themeColor,
                     onPressed: () {
                       clearDriverData(context);
@@ -335,19 +335,19 @@ class _ThankuScreenState extends State<ThankuScreen>
           ),
           const SizedBox(height: 20),
           Text(
-            "${"Great Job".translate(context)}, $myName !".translate(context),
+            "${"Ótimo trabalho".translate(context)}, $myName !".translate(context),
             style: heading2Grey1(context),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 12),
           Text(
-            "You’ve successfully completed this ride. Your dedication helps our riders reach their destination safely and on time.".translate(context),
+            "Você concluiu esta corrida com sucesso. Sua dedicação ajuda nossos passageiros a chegar ao destino com segurança e pontualidade.".translate(context),
             style: regular2(context),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 10),
           Text(
-            "Keep up the great service!".translate(context),
+            "Continue oferecendo um excelente serviço!".translate(context),
             style: heading3(context).copyWith(color: themeColor),
             textAlign: TextAlign.center,
           ),
@@ -379,7 +379,7 @@ class _ThankuScreenState extends State<ThankuScreen>
       child: Column(
         children: [
           Text(
-            "You Rated This Ride".translate(context),
+            "Você avaliou esta corrida".translate(context),
             style: heading3Grey1(context),
           ),
           const SizedBox(height: 16),
@@ -405,7 +405,7 @@ class _ThankuScreenState extends State<ThankuScreen>
           ),
           const SizedBox(height: 8),
           Text(
-            "Thank you for your feedback".translate(context),
+            "Obrigado pelo seu feedback".translate(context),
             style: regular(context),
           ),
         ],
@@ -442,3 +442,4 @@ class _DotsPainter extends CustomPainter {
 }
 
  
+

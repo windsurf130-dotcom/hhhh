@@ -127,14 +127,14 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                               const SizedBox(
                                 height: 20,
                               ),
-                              Text("Verification".translate(context),
+                              Text("Verificação".translate(context),
                                   style: heading1Grey1(context).copyWith(
                                       color: notifires.getGrey2whiteColor)),
                               const SizedBox(
                                 height: 10,
                               ),
                               Text(
-                                  "We have sent the code verification to"
+                                  "Enviamos o código de verificação para"
                                       .translate(context),
                                   style: regular2(context)),
                               const SizedBox(height: 10),
@@ -166,7 +166,7 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                                         Dimensions.radiusDefault),
                                     borderSide: BorderSide(color: grey5),
                                   ),
-                                  hintText: "Enter OTP".translate(context),
+                                  hintText: "Digite o OTP".translate(context),
                                   hintStyle: regular2(context),
                                   enabledBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(13),
@@ -187,7 +187,7 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                                             MainAxisAlignment.center,
                                         children: [
                                           Text(
-                                              "Didn't receive code?"
+                                              "Não recebeu o código?"
                                                   .translate(context),
                                               style: regular3(context).copyWith(
                                                   color: notifires
@@ -210,7 +210,7 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                                               });
                                             },
                                             child: Text(
-                                                "Resend Code"
+                                                "Reenviar Código"
                                                     .translate(context),
                                                 style: regular2(context)
                                                     .copyWith(
@@ -227,7 +227,7 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                                             MainAxisAlignment.center,
                                         children: [
                                           Text(
-                                            "Resend code in".translate(context),
+                                            "Reenviar código em".translate(context),
                                             style: regular3(context).copyWith(
                                                 color: notifires
                                                     .getGrey2whiteColor),
@@ -254,7 +254,7 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                                             widget.email ?? "",
                                             textEditingOtpController.text);
                                   },
-                                  text: "Verify".translate(context),
+                                  text: "Verificar".translate(context),
                                   textColor: blackColor,
                                   backgroundColor: themeColor),
                               const SizedBox(
@@ -264,7 +264,7 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "Try again".translate(context),
+                                    "Tentar novamente".translate(context),
                                     style: regular3(context).copyWith(
                                         color: notifires.getGrey2whiteColor),
                                   ),
@@ -277,7 +277,7 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                                         Navigator.pop(context);
                                       },
                                       child: Text(
-                                        "Go Back".translate(context),
+                                        "Voltar".translate(context),
                                         style: boldstyle(context)
                                             .copyWith(color: themeColor),
                                       )),

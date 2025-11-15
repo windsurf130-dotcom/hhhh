@@ -50,9 +50,9 @@ class _HistoryScreenState extends State<HistoryScreen> {
   }
 
   final List<String> statuses = [
-    "Completed",
-    "Rejected",
-    "Cancelled",
+    "Concluídas",
+    "Rejeitadas",
+    "Canceladas",
   ];
 
   RefreshController refreshController = RefreshController();
@@ -110,11 +110,11 @@ class _HistoryScreenState extends State<HistoryScreen> {
       child: Scaffold(
         backgroundColor: whiteColor,
         appBar: widget.isBackButton == true
-            ? const CustomAppBar(title: "History")
+            ? const CustomAppBar(title: "Histórico")
             : AppBar(
                 surfaceTintColor: whiteColor,
                 title: Text(
-                  "History".translate(context),
+                  "Histórico".translate(context),
                   style: headingBlack(context)
                       .copyWith(fontSize: 22, color: blackColor),
                 ),
@@ -228,7 +228,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                   child: bookings.isEmpty
                       ? Center(
                           child: Text(
-                          "No data available".translate(context),
+                          "Nenhum dado disponível".translate(context),
                           style: regular2(context),
                         ))
                       : ListView.builder(

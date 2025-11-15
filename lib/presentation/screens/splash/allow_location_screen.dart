@@ -72,7 +72,7 @@ class _AllowLocationScreenState extends State<AllowLocationScreen> {
         final result = await Permission.systemAlertWindow.request();
         if (result.isPermanentlyDenied) {
           // ignore: use_build_context_synchronously
-          BotToast.showText(text: "Overlay permission denied. Enable from settings.".translate(context));
+          BotToast.showText(text: "Permissão de sobreposição negada. Ative nas configurações.".translate(context));
           blocked = true;
         }
       }
@@ -82,7 +82,7 @@ class _AllowLocationScreenState extends State<AllowLocationScreen> {
         final result = await Permission.locationWhenInUse.request();
         if (result.isPermanentlyDenied) {
           // ignore: use_build_context_synchronously
-          BotToast.showText(text: "Location permission denied. Enable from settings.".translate(context));
+          BotToast.showText(text: "Permissão de localização negada. Ative nas configurações.".translate(context));
           blocked = true;
         }
       }
@@ -108,8 +108,8 @@ class _AllowLocationScreenState extends State<AllowLocationScreen> {
 
 
     final permissionText = Platform.isIOS
-        ? "We need your location even when the app isn't open to ensure accurate ride tracking.\n\nWhen prompted by iOS, choose the option that allows location access at all times. This will help your driver find you faster, ensure safety, and improve route accuracy."
-        : "To serve you better, we need:\n\n1. *Location Access* – for real-time tracking even in the background.\n2. *Overlay Permission* – to show ride updates while you use other apps.\n\nThis helps your driver reach you quickly and keeps your trip seamless.";
+        ? "Precisamos da sua localização mesmo quando o app não estiver aberto para garantir o rastreamento preciso das corridas.\n\nQuando o iOS solicitar, escolha a opção que permite acesso à localização o tempo todo. Isso ajudará seu motorista a encontrá-lo mais rapidamente, garantirá segurança e melhorará a precisão da rota."
+        : "Para atendê-lo melhor, precisamos de:\n\n1. *Acesso à Localização* – para rastreamento em tempo real mesmo em segundo plano.\n2. *Permissão de Sobreposição* – para mostrar atualizações da corrida enquanto você usa outros apps.\n\nIsso ajuda seu motorista a chegar até você rapidamente e mantém sua viagem contínua.";
 
     return Scaffold(
       backgroundColor: whiteColor,
@@ -158,7 +158,7 @@ class _AllowLocationScreenState extends State<AllowLocationScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: CustomsButtons(
                 textColor: blackColor,
-                text: "Continue",
+                text: "Continuar",
                 backgroundColor: themeColor,
                 onPressed: _requestPermissions,
               ),
@@ -186,7 +186,7 @@ Future<bool> checkAndRequestAlwaysLocationPermission(BuildContext context) async
           children: [
             const Icon(Icons.my_location, color: Colors.blueAccent),
             const SizedBox(width: 8),
-            Text("Enable Background Location".translate(context), style: heading2Grey1(context)),
+            Text("Ativar Localização em Segundo Plano".translate(context), style: heading2Grey1(context)),
           ],
         ),
         content: Column(
@@ -194,7 +194,7 @@ Future<bool> checkAndRequestAlwaysLocationPermission(BuildContext context) async
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Allowing background location helps us show ride requests near you, even when the app isn’t open. You can choose 'Always' in the next screen if you’d like this feature.".translate(context),
+              "Permitir a localização em segundo plano nos ajuda a mostrar solicitações de corrida próximas a você, mesmo quando o aplicativo não estiver aberto. Você pode escolher 'Sempre' na próxima tela, se desejar este recurso.".translate(context),
               style: regular2(context),
             ),
             const SizedBox(height: 12),
@@ -204,7 +204,7 @@ Future<bool> checkAndRequestAlwaysLocationPermission(BuildContext context) async
                 const Icon(Icons.looks_one, size: 20, color: Colors.green),
                 const SizedBox(width: 6),
                 Expanded(
-                  child: Text("Select 'Continue' to review location settings.".translate(context), style: regular(context)),
+                  child: Text("Selecione 'Continuar' para revisar as configurações de localização.".translate(context), style: regular(context)),
                 ),
               ],
             ),
@@ -215,7 +215,7 @@ Future<bool> checkAndRequestAlwaysLocationPermission(BuildContext context) async
                 const Icon(Icons.looks_two, size: 20, color: Colors.green),
                 const SizedBox(width: 6),
                 Expanded(
-                  child: Text("In Location Access, you may choose 'Always' to stay connected.".translate(context), style: regular(context)),
+                  child: Text("Em Acesso à Localização, você pode escolher 'Sempre' para permanecer conectado.".translate(context), style: regular(context)),
                 ),
               ],
             ),
@@ -224,7 +224,7 @@ Future<bool> checkAndRequestAlwaysLocationPermission(BuildContext context) async
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: Text("Not Now".translate(context), style: heading3Grey1(context)),
+            child: Text("Agora não".translate(context), style: heading3Grey1(context)),
           ),
           ElevatedButton.icon(
             onPressed: () {
@@ -232,7 +232,7 @@ Future<bool> checkAndRequestAlwaysLocationPermission(BuildContext context) async
               openAppSettings();
             },
             icon: const Icon(Icons.arrow_forward, size: 18),
-            label: Text("Continue".translate(context), style: heading3Grey1(context).copyWith(color: blackColor)),
+            label: Text("Continuar".translate(context), style: heading3Grey1(context).copyWith(color: blackColor)),
             style: ElevatedButton.styleFrom(
               backgroundColor: themeColor,
               foregroundColor: Colors.white,

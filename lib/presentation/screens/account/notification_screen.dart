@@ -17,16 +17,24 @@ class _NotificationScreenState extends State<NotificationScreen> {
     {"type": "Promotion", "message": "Invite friends - Get 3 coupons each!"},
     {"type": "System", "message": "Thank You! Your transaction is complete."},
     {"type": "Promotion", "message": "Invite friends - Get 3 coupons each!"},
-    {"type": "System", "message": "Your booking #5445 has been successful."},
+    {"type": "System", "message": "Your booking #6789 has been successful."},
     {"type": "Promotion", "message": "Invite friends - Get 3 coupons each!"},
   ];
+
+  String _getTranslatedMessage(String message) {
+    if (message.startsWith("Your booking #")) {
+      final bookingNumber = message.split('#')[1].split(' ')[0];
+      return "Your booking #%s has been successful.".translate(context).replaceAll("%s", bookingNumber);
+    }
+    return message.translate(context);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: whiteColor,
       appBar: CustomAppBar(
-        title: "Notifications",
+        title: "Notifications".translate(context),
         onBackTap: () {
           goBack();
         },
@@ -62,13 +70,13 @@ class _NotificationScreenState extends State<NotificationScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            notification["type"]!,
+notification["type"]!.translate(context),
                             style: headingBlackBold(context)
                                 .copyWith(fontSize: 18),
                             softWrap: true,
                           ),
                           Text(
-                            notification["message"]!,
+_getTranslatedMessage(notification["message"]!),
                             style: regularBlack(context).copyWith(fontSize: 14),
                             softWrap: true,
                           ),

@@ -16,20 +16,20 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
   List content = [
     {
       "image": "assets/images/onBoarding1.png",
-      "title": "Register Vehicle",
+      "title": "Cadastrar Veículo",
       "description":
-          "Let's get you started by registering \n your vehicle on Amar!"
+          "Vamos começar cadastrando \n seu veículo no Amar!"
     },
     {
       "image": "assets/images/onBoarding2.png",
-      "title": "Upload Documents",
+      "title": "Enviar Documentos",
       "description":
-          "We would like to get to know you better. Let’s get \n some documents uploaded!"
+          "Gostaríamos de conhecê-lo melhor. Vamos \n enviar alguns documentos!"
     },
     {
       "image": "assets/images/onBoarding3.png",
-      "title": "Earn Money",
-      "description": "Click below and start making money!"
+      "title": "Ganhe Dinheiro",
+      "description": "Clique abaixo e comece a ganhar dinheiro!"
     }
   ];
 
@@ -155,7 +155,7 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
                 Padding(
                   padding: const EdgeInsets.all(18),
                   child: CustomsButtons(
-                      text: currentIndex == 0 ? "Get Started" : "Next",
+                      text: currentIndex == 0 ? "Começar" : "Próximo",
                       textColor: blackColor,
                       backgroundColor: themeColor,
                       onPressed: () {

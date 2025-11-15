@@ -74,7 +74,7 @@ class _EditProfileState extends State<EditProfile> {
     return Scaffold(
       backgroundColor: whiteColor,
       appBar: CustomAppBar(
-        title: "Edit Profile",
+        title: "Edit Profile".translate(context),
         onBackTap: () {
           goBack();
         },
@@ -311,7 +311,7 @@ class _EditProfileState extends State<EditProfile> {
                             prefixIconColor: blackColor,
                             textStyle: regularBlack(context).copyWith(fontSize: 16),
                             prefixIconImage: "assets/images/gender-icon.png",
-                            options: optionsList,
+                            options: optionsList.map((e) => e.translate(context)).toList(),
                             onSelected: (value) {
                               loginModel!.data!.gender = value;
                             },
@@ -329,7 +329,7 @@ class _EditProfileState extends State<EditProfile> {
                 backgroundColor: themeColor,
                 onPressed: () {
                   if (loginModel!.data!.gender == null) {
-                    showErrorToastMessage("Please select gender");
+                    showErrorToastMessage("Please select gender".translate(context));
                     return;
                   }
                   context

@@ -67,13 +67,13 @@ class _PaymentGatewayScreenState extends State<PaymentGatewayScreen> {
       endSession(success: true);
       debugPrint('✅ wallet_recharge_success');
     } else if (url.contains("wallet_recharge_fail")) {
-      endSession(message: "Your recharge failed");
+      endSession(message: "Your recharge failed".translate(context));
       debugPrint('❌ wallet_recharge_fail');
     } else if (url.contains("payment_fail")) {
-      endSession(message: "Your booking failed");
+      endSession(message: "Your booking failed".translate(context));
       debugPrint('❌ payment_fail');
     } else if (url.contains("/invalid-order")) {
-      endSession(message: "Invalid Order");
+      endSession(message: "Invalid Order".translate(context));
       debugPrint('⚠️ invalid-order');
     }
   }

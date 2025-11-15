@@ -46,7 +46,7 @@ class _VehicleInformationScreenState extends State<VehicleInformationScreen> {
     return Scaffold(
       backgroundColor: notifires.getbgcolor,
       appBar: CustomAppBars(
-          title: "Vehicle Information",
+          title: "Vehicle Information".translate(context),
           backgroundColor: notifires.getbgcolor,
           titleColor: notifires.getGrey1whiteColor),
       body: BlocBuilder<GetItemVehicleDataCubit, GetItemVehicleDataState>(
@@ -146,7 +146,7 @@ class _VehicleInformationScreenState extends State<VehicleInformationScreen> {
                   style: heading2Grey1(context).copyWith(color: Colors.white),
                 ),
                 Text(
-                  "${itemVehicleModel?.vehicleModel ?? "Unknown"} • ${itemVehicleModel?.vehicleYear ?? ""}",
+                  "${itemVehicleModel?.vehicleModel ?? "Unknown".translate(context)} • ${itemVehicleModel?.vehicleYear ?? ""}",
                   style: heading3Grey1(context).copyWith(color: grey5),
                 ),
               ],
@@ -301,7 +301,7 @@ class _VehicleInformationScreenState extends State<VehicleInformationScreen> {
                 child: buildInfoTile(
                   icon: CupertinoIcons.number_circle,
                   label: "Vehicle No.",
-                  value: itemVehicleModel?.vehicleNumber ?? "NA",
+                  value: itemVehicleModel?.vehicleNumber ?? "N/A",
                   iconColor: Colors.deepPurple,
                 ),
               ),
@@ -310,7 +310,7 @@ class _VehicleInformationScreenState extends State<VehicleInformationScreen> {
                 child: buildInfoTile(
                   icon: Icons.directions_car_filled,
                   label: "Make",
-                  value: selectedMake,
+                  value: selectedMake == "N/A" ? "N/A".translate(context) : selectedMake,
                   iconColor: Colors.teal,
                 ),
               ),
@@ -322,7 +322,7 @@ class _VehicleInformationScreenState extends State<VehicleInformationScreen> {
                 child: buildInfoTile(
                   icon: Icons.car_rental,
                   label: "Model",
-                  value: itemVehicleModel?.vehicleModel ?? "NA",
+                  value: itemVehicleModel?.vehicleModel ?? "N/A",
                   iconColor: Colors.indigo,
                 ),
               ),
@@ -331,7 +331,7 @@ class _VehicleInformationScreenState extends State<VehicleInformationScreen> {
                 child: buildInfoTile(
                   icon: Icons.directions_bus,
                   label: "Type",
-                  value: itemVehicleModel?.vehicleType ?? "NA",
+                  value: itemVehicleModel?.vehicleType ?? "N/A",
                   iconColor: Colors.orange,
                 ),
               ),
@@ -343,7 +343,7 @@ class _VehicleInformationScreenState extends State<VehicleInformationScreen> {
                 child: buildInfoTile(
                   icon: Icons.date_range,
                   label: "Year",
-                  value: itemVehicleModel?.vehicleYear ?? "NA",
+                  value: itemVehicleModel?.vehicleYear ?? "N/A",
                   iconColor: Colors.pink,
                 ),
               ),
@@ -352,7 +352,7 @@ class _VehicleInformationScreenState extends State<VehicleInformationScreen> {
                 child: buildInfoTile(
                   icon: Icons.color_lens,
                   label: "Color",
-                  value: itemVehicleModel?.vehicleColor ?? "NA",
+                  value: itemVehicleModel?.vehicleColor ?? "N/A",
                   iconColor: Colors.redAccent,
                 ),
               ),
